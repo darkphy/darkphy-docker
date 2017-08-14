@@ -1,5 +1,5 @@
 
-FROM elixir:latest
+FROM ubuntu:latest
 
 # install depencies
 RUN apt-get update \
