@@ -27,13 +27,7 @@ RUN mix local.hex --force && \
     mix local.rebar --force && \
     mix hex.info
 
-EXPOSE 4000
 
-CMD ["sh", "-c", "mix deps.get && mix phoenix.server"]
-
-
-
-FROM debian:jessie
 # add our user and group first to make sure their IDs get assigned consistently, regardless of whatever dependencies get added
 RUN groupadd -r mysql && useradd -r -g mysql mysql
 
@@ -102,4 +96,6 @@ RUN ln -s usr/local/bin/docker-entrypoint.sh /entrypoint.sh # backwards compat
 ENTRYPOINT ["docker-entrypoint.sh"]
 
 EXPOSE 3306
+#EXPOSE 4000
+#CMD ["sh", "-c", "mix deps.get && mix phoenix.server"]
 CMD ["mysqld"]
