@@ -4,7 +4,7 @@ ARG NODE_MAJOR_VERSION=8
 
 
 RUN apt-get update && \
-    apt-get install -y curl mysql-client && \
+    apt-get install -y curl mysql-server mysql-client && \
 
     # Add Node.js from nodesource
     curl -sL https://deb.nodesource.com/setup_${NODE_MAJOR_VERSION}.x | bash - && \
