@@ -9,7 +9,10 @@ RUN apt-get update && \
     # Add Node.js from nodesource
     curl -sL https://deb.nodesource.com/setup_${NODE_MAJOR_VERSION}.x | bash - && \
     apt-get install -y nodejs && \
-
+    
+    # Add yarnpkg 
+    apt-get install -y yarn && \
+    
     # Clean up
     apt-get purge -y curl && \
     apt-get clean && \
