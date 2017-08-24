@@ -10,6 +10,6 @@ RUN \
 RUN /usr/local/bin/mix local.hex --force && \
     /usr/local/bin/mix local.rebar --force
 
-RUN service docker start
+RUN /etc/init.d/service docker start
 RUN docker ps
 
