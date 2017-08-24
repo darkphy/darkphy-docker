@@ -1,11 +1,11 @@
 FROM bitwalker/alpine-elixir:latest
 
-ARG NODE_MAJOR_VERSION=8
+#ARG NODE_MAJOR_VERSION=8
 
 
 RUN \
     apk update && \
-    apk add --no-cache --no-progress mysql-client
+    apk add mysql-client
 
 # ENV VERSION=v4.8.4 NPM_VERSION=2
 # ENV VERSION=v6.11.2 NPM_VERSION=3
