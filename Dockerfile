@@ -4,7 +4,7 @@ FROM bitwalker/alpine-elixir:latest
 
 RUN \
     apk update && \
-    apk add mysql-client nodejs nodejs-npm yarn openrc
+    apk add mysql-client nodejs nodejs-npm yarn docker openrc
 
 # Install local Elixir hex and rebar
 RUN /usr/local/bin/mix local.hex --force && \
