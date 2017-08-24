@@ -11,5 +11,5 @@ RUN /usr/local/bin/mix local.hex --force && \
     /usr/local/bin/mix local.rebar --force
 
 #RUN rc-service docker start
-RUN docker ps
+#RUN docker ps
 
